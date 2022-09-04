@@ -24,5 +24,13 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected,result);
     }
+    @Test
+    public void shouldCalculateIfAmount1000() {
+        CashbackHackService service = new CashbackHackService();
+        int expected = 0;
+        int amount = 1000;
+        int result = service.remain(amount);
 
+        assertEquals(expected, result);
+    }
 }
