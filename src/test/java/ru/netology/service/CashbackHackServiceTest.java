@@ -10,9 +10,9 @@ public class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
         int expected = 100;
         int amount = 900;
-        int result = service.remain (amount);
+        int result = service.remain(amount);
 
-        assertEquals(expected,result);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -22,7 +22,16 @@ public class CashbackHackServiceTest {
         int amount = 0;
         int result = service.remain(amount);
 
-        assertEquals(expected,result);
+        assertEquals(expected, result);
     }
 
+    @Test
+    public void shouldCalculateIfAmount1000() {
+        CashbackHackService service = new CashbackHackService();
+        int expected = 0;
+        int amount = 1000;
+        int result = service.remain(amount);
+
+        assertEquals(expected, result);
+    }
 }
